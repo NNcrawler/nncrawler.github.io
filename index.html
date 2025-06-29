@@ -16,7 +16,7 @@ origin-bottom-left">Let's Have a Chat!</a><div><i class="font-['Roboto Condensed
     import { press, animate, spring } from "https://esm.sh/motion@12.19.2"
 
     const showChannels = (el) => {
-        animate(el, { rotate: 5 }, { type: spring, bounce: 1 })
+        animate(el, { rotate: 5 }, { type: spring, bounce: 0.8 })
 
         const channel = document.getElementById("channels")
         channel.classList.remove('invisible')
@@ -26,7 +26,7 @@ origin-bottom-left">Let's Have a Chat!</a><div><i class="font-['Roboto Condensed
         })
     }
     const hideChannels = (el) => {
-        animate(el, { rotate: 0 }, { type: spring, bounce: 1 })
+        animate(el, { rotate: 0 }, { type: spring, bounce: 0.8 })
 
         const channel = document.getElementById("channels")
         animate(channel, { opacity: [1, 0], transform: ["rotate(-2deg) translateY(0px)", "rotate(-2deg) translateY(20px)"] }, {
@@ -53,6 +53,11 @@ origin-bottom-left">Let's Have a Chat!</a><div><i class="font-['Roboto Condensed
         if (e.target.id === chat.id) {
             return
         }
+        pressed = false
+        hideChannels(chat)
+    })
+
+    document.addEventListener('keydown', () => {
         pressed = false
         hideChannels(chat)
     })

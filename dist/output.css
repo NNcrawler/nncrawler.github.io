@@ -1236,23 +1236,6 @@ video {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-@keyframes textIn {
-
-  0%, 30% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  35%, 60% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  75%, 100% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-}
 .animate-\[textIn_10s_infinite\] {
   animation: textIn 10s infinite;
 }
