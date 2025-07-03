@@ -1402,6 +1402,12 @@ video {
 .font-\[\'Caveat\'\2c cursive\] {
   font-family: 'Caveat',cursive;
 }
+.font-caveat {
+  font-family: Caveat, cursive;
+}
+.font-roboto-condensed {
+  font-family: Roboto Condensed, Arial Narrow, sans-serif;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
