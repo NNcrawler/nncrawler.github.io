@@ -1399,9 +1399,6 @@ video {
 .text-center {
   text-align: center;
 }
-.font-\[\'Caveat\'\2c cursive\] {
-  font-family: 'Caveat',cursive;
-}
 .font-caveat {
   font-family: Caveat, cursive;
 }
