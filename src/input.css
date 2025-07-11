@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* Force commonly used color classes to be included */
+  .force-colors {
+    /* Reference colors as literal strings to prevent purging */
+    /* bg-slate-50 text-slate-500 text-sky-500 hover:text-sky-600 text-sub-color */
+    /* This comment ensures the above classes are detected by Tailwind's content scanner */
+    display: none;
+  }
+  
   .scrollbar-overlay {
     overflow: auto;
     scrollbar-gutter: stable overlay; /* Overlay scrollbar space */
