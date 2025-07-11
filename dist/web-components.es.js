@@ -4803,13 +4803,11 @@ let W = class extends oe {
     this._initializeFilters(), this._applyFilters();
   }
   _initializeFilters() {
-    const t = this.querySelectorAll(`[${this.filterAttribute}]`);
-    console.log("Found elements with filter attribute:", t.length);
-    const e = Array.from(t).map((r) => {
+    const t = this.querySelectorAll(`[${this.filterAttribute}]`), e = Array.from(t).map((r) => {
       const i = r.getAttribute(this.filterAttribute);
-      return i && console.log("Filter value:", i), i ? this.filterStateManager.parseFilterAttribute(i) : null;
+      return i ? this.filterStateManager.parseFilterAttribute(i) : null;
     }).filter((r) => r !== null);
-    console.log("Parsed filters array:", e), this.filterState = this.filterStateManager.initializeFromContent(e), this._updateActiveFiltersState(), console.log("Filter state after initialization:", this.filterState);
+    this.filterState = this.filterStateManager.initializeFromContent(e), this._updateActiveFiltersState();
   }
   _handleFilterChange(t) {
     const e = t.target, [r, i] = e.value.split(":"), o = e.checked, n = {
