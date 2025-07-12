@@ -2614,10 +2614,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity, 1));
 }
-.text-fuchsia-700 {
-  --tw-text-opacity: 1;
-  color: rgb(162 28 175 / var(--tw-text-opacity, 1));
-}
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity, 1));
