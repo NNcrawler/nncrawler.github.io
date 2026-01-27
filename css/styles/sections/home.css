@@ -127,12 +127,19 @@
 
 .home-channel {
   display: inline-flex;
+  color: var(--gray-7);
+  transition: color 180ms ease;
 }
 
 .home-channel-icon {
   display: block;
   width: 2.25rem;
   height: 2.25rem;
+}
+
+.home-channel:hover,
+.home-channel:focus-visible {
+  color: var(--blue-6);
 }
 
 .home-chat-button {
