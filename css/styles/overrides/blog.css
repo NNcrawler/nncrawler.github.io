@@ -43,7 +43,7 @@
   border: 1px solid var(--gray-2);
   border-radius: var(--radius-4);
   background: transparent;
-  box-shadow: 0 18px 40px -26px rgba(15, 23, 42, 0.55);
+  box-shadow: var(--surface-shadow-hover);
 }
 
 .blog-post__content > :first-child {
