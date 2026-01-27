@@ -1,0 +1,39 @@
+/* Sections layer: Not Found */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.not-found__title {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.not-found__message {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.not-found__link {
+  font-family: "Caveat", cursive;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--blue-5);
+  text-decoration: none;
+}
+
+.not-found__link:hover,
+.not-found__link:focus-visible {
+  text-decoration: underline;
+  color: var(--blue-6);
+}

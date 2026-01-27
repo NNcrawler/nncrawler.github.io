@@ -1,0 +1,20 @@
+/* Overrides layer: Home fonts (home page only) */
+.home {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.home-title,
+.home-feed-header__title,
+.home-post__title,
+.home-chat-label {
+  font-family: "Space Grotesk", "Inter", "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-weight: 700;
+}
+
+.home-feed-header__eyebrow,
+.home-post__meta,
+.home-nav-label {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}

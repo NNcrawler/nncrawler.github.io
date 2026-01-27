@@ -1,8 +1,1 @@
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
-
-@theme {
-    --font-caveat: "Caveat", cursive;
-    --font-roboto-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
-    --color-sub: oklch(55.4% 0.046 257.417);
-}
+/* Tailwind removed. CSS now lives under static/css/. */

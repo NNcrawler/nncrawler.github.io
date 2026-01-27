@@ -1,0 +1,61 @@
+/* Overrides layer: Blog post fonts (match homepage feed) */
+.blog-post {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --card-background-color: transparent;
+}
+
+.blog-post__header {
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.6rem;
+}
+
+.blog-post__title,
+.blog-post__content :is(h1, h2, h3, h4) {
+  font-family: "Space Grotesk", "Inter", "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-weight: 700;
+}
+
+.blog-post__title.link-title {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.blog-post__meta {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.blog-post__tags {
+  justify-content: flex-start;
+}
+
+.blog-post__content {
+  --pico-card-background-color: transparent;
+  --pico-card-box-shadow: none;
+  --pico-block-spacing-vertical: 0;
+  --pico-block-spacing-horizontal: 0;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 1.4rem;
+  border: 1px solid var(--gray-2);
+  border-radius: var(--radius-4);
+  background: transparent;
+  box-shadow: 0 18px 40px -26px rgba(15, 23, 42, 0.55);
+}
+
+.blog-post__content > :first-child {
+  margin-top: 0;
+}
+
+.blog-post__content > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 48rem) {
+  .blog-post__content {
+    padding: 1.75rem 2rem 1.9rem;
+  }
+}

@@ -1,0 +1,26 @@
+/* Sections layer: List Page Frame */
+.list-page__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.list-page__title {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-size: 3.75rem;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.list-page__subtitle {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--gray-5);
+  opacity: 0.3;
+}

@@ -1,0 +1,42 @@
+/* Sections layer: Default Content Pages */
+.default-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.default-page__title {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.default-page__meta {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--gray-5);
+}
+
+.default-page__content {
+  margin-top: 0.5rem;
+}
+
+.default-page__list {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.default-page__link {
+  color: var(--blue-6);
+  text-decoration: none;
+}
+
+.default-page__link:hover,
+.default-page__link:focus-visible {
+  color: var(--blue-5);
+  text-decoration: underline;
+}

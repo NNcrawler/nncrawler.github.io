@@ -1,0 +1,105 @@
+/* Components layer */
+.surface--page {
+  background: var(--gray-0);
+  box-shadow: var(--shadow-6);
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-2);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  padding: 1.5rem;
+}
+
+.title--script {
+  font-family: "Caveat", cursive;
+}
+
+.title--xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.title--lg {
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+.title--md {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.text--muted {
+  color: var(--gray-6);
+}
+
+.text--subtle {
+  color: var(--gray-5);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-round);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.7;
+}
+
+.link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-round);
+  background: var(--gray-5);
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-1);
+}
+
+.link-chip:hover,
+.link-chip:focus-visible {
+  background: var(--blue-6);
+  color: var(--white);
+}
+
+.link-title {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: var(--blue-5);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.link-title:hover,
+.link-title:focus-visible {
+  background: var(--blue-6);
+  color: var(--white);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.site-icon {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--gray-6);
+  text-align: center;
+}

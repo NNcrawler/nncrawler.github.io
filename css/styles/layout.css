@@ -1,0 +1,88 @@
+/* Layout layer */
+.site-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.site-frame__inner {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+}
+
+.site-frame__inner--list {
+  padding: 2rem;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1.5rem;
+}
+
+.page-container--wide {
+  max-width: 72rem;
+}
+
+.stack-md {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stack-xl {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cluster-sm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cluster-md {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.row-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}

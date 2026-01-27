@@ -1,0 +1,21 @@
+/* Base layer */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  color: var(--gray-8);
+  background: var(--gray-0);
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}

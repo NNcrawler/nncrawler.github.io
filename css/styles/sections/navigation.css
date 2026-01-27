@@ -1,0 +1,49 @@
+/* Sections layer: Navigation */
+.site-nav {
+  border-bottom: 1px solid var(--gray-2);
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+}
+
+.site-nav__inner {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  color: var(--gray-9);
+  text-decoration: none;
+}
+
+.site-nav__links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-2);
+  color: var(--gray-6);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  color: var(--gray-9);
+  background: var(--gray-1);
+}
