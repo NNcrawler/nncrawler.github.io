@@ -24,3 +24,7 @@
   color: var(--gray-5);
   opacity: 0.3;
 }
+
+.list-page__header--portfolio {
+  display: none;
+}
