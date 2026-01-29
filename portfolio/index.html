@@ -1,11 +1,23 @@
 <!doctype html><html lang=en><head><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=stylesheet href=/fonts/fonts.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap"><link rel=stylesheet href=/css/main.css><script async src="https://www.googletagmanager.com/gtag/js?id=G-WKCSK8TQ4L"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WKCSK8TQ4L")}</script><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>rasyidhakim.com</title><script src=/dist/web-components.umd.js></script><script>window.customElements||document.write('<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-loader.js"><\/script>')</script></head><body><div class=site-frame><div class="site-frame__inner site-frame__inner--list surface--page site-frame__inner--portfolio"><div class="list-page__header list-page__header--portfolio"><h1 class=list-page__title>portfolio.</h1><p class=list-page__subtitle>Showcase of my craft.</p></div><div class=portfolio-page><section class=portfolio-hero><div class=portfolio-hero__grid><div class=portfolio-hero__content><p class=portfolio-hero__eyebrow>Portfolio</p><h2 class=portfolio-hero__title>Crafting strong systems requires skill — and skill comes from hard-won experience</h2><p class=portfolio-hero__subhead>Systems, platforms, and product tooling built across data, infrastructure, and growth.</p><p class=portfolio-hero__lead>A showcase of my engineering projects and technical achievements</p></div></div></section><section class=portfolio-breadth><div class=portfolio-section__header><p class=portfolio-section__eyebrow>Breadth map</p><h3 class=portfolio-section__title>A scan of domains, stacks, and systems</h3><p class=portfolio-section__description>Built across data, platform, and product tooling. This is the fastest way to understand the range.</p></div><div class=portfolio-breadth__grid><article class=portfolio-breadth__card><p class=portfolio-breadth__label>Used programming language</p><p class=portfolio-breadth__values><span id=languages>JavaScript, Golang, Java, Clojure, Ruby, Python</span></p><script type=module>
     import Typewriter from 'https://esm.sh/typewriter-effect@2.21.0/dist/core';
 
-    function typeEffect(elId) {
+    function typeEffect(elId, opts = {}) {
         const element = document.getElementById(elId);
         if (!element) {
             return;
         }
+        if (opts.disableWebkit) {
+            const ua = navigator.userAgent || '';
+            const isWebKit = /AppleWebKit/i.test(ua);
+            const isChromeLike = /Chrome|Chromium|Edg|OPR|OPiOS|CriOS/i.test(ua);
+            const isIOS = /iP(hone|ad|od)/i.test(ua);
+            const isSafari = /Safari/i.test(ua) && !isChromeLike;
+            const isIOSWebView = isIOS && !/Safari/i.test(ua);
+            if ((isWebKit && isSafari) || isIOSWebView) {
+                return;
+            }
+        }
+
         const values = element.textContent.split(', ').filter(Boolean);
         element.textContent = '';
 
@@ -26,15 +38,31 @@
         typewriter.start();
     }
 
-    typeEffect("languages")
+    const typeEffectId = "languages";
+    const typeEffectDisableWebkit =  true ;
+    if (typeEffectId) {
+        typeEffect(typeEffectId, { disableWebkit: typeEffectDisableWebkit });
+    }
 </script></article><article class=portfolio-breadth__card><p class=portfolio-breadth__label>Built systems on top of</p><p class=portfolio-breadth__values><span id=platforms>Apache Flink, Apache Kafka, Websocket, Rest, BigQuery, PostgreSQL, React, Kubernetes, Terraform, GCP, MaxCompute</span></p><script type=module>
     import Typewriter from 'https://esm.sh/typewriter-effect@2.21.0/dist/core';
 
-    function typeEffect(elId) {
+    function typeEffect(elId, opts = {}) {
         const element = document.getElementById(elId);
         if (!element) {
             return;
         }
+        if (opts.disableWebkit) {
+            const ua = navigator.userAgent || '';
+            const isWebKit = /AppleWebKit/i.test(ua);
+            const isChromeLike = /Chrome|Chromium|Edg|OPR|OPiOS|CriOS/i.test(ua);
+            const isIOS = /iP(hone|ad|od)/i.test(ua);
+            const isSafari = /Safari/i.test(ua) && !isChromeLike;
+            const isIOSWebView = isIOS && !/Safari/i.test(ua);
+            if ((isWebKit && isSafari) || isIOSWebView) {
+                return;
+            }
+        }
+
         const values = element.textContent.split(', ').filter(Boolean);
         element.textContent = '';
 
@@ -55,15 +83,31 @@
         typewriter.start();
     }
 
-    typeEffect("platforms")
+    const typeEffectId = "platforms";
+    const typeEffectDisableWebkit =  true ;
+    if (typeEffectId) {
+        typeEffect(typeEffectId, { disableWebkit: typeEffectDisableWebkit });
+    }
 </script></article><article class=portfolio-breadth__card><p class=portfolio-breadth__label>Systems I've crafted</p><p class=portfolio-breadth__values><span id=systems>Web UI, Data Ingestion, Analytics, ETL, Deployment solution, Streaming Engine</span></p><script type=module>
     import Typewriter from 'https://esm.sh/typewriter-effect@2.21.0/dist/core';
 
-    function typeEffect(elId) {
+    function typeEffect(elId, opts = {}) {
         const element = document.getElementById(elId);
         if (!element) {
             return;
         }
+        if (opts.disableWebkit) {
+            const ua = navigator.userAgent || '';
+            const isWebKit = /AppleWebKit/i.test(ua);
+            const isChromeLike = /Chrome|Chromium|Edg|OPR|OPiOS|CriOS/i.test(ua);
+            const isIOS = /iP(hone|ad|od)/i.test(ua);
+            const isSafari = /Safari/i.test(ua) && !isChromeLike;
+            const isIOSWebView = isIOS && !/Safari/i.test(ua);
+            if ((isWebKit && isSafari) || isIOSWebView) {
+                return;
+            }
+        }
+
         const values = element.textContent.split(', ').filter(Boolean);
         element.textContent = '';
 
@@ -84,7 +128,11 @@
         typewriter.start();
     }
 
-    typeEffect("systems")
+    const typeEffectId = "systems";
+    const typeEffectDisableWebkit =  true ;
+    if (typeEffectId) {
+        typeEffect(typeEffectId, { disableWebkit: typeEffectDisableWebkit });
+    }
 </script></article></div></section><section class=portfolio-metrics><div class=portfolio-section__header><p class=portfolio-section__eyebrow>Metrics</p><h3 class=portfolio-section__title>Impact in numbers</h3><p class=portfolio-section__description>A few quantitative anchors that show scale and outcome.</p></div><div class=portfolio-metrics__row><div class=portfolio-metrics__item><p class=portfolio-metrics__value>7+</p><p class=portfolio-metrics__label>Years in Engineering</p></div><div class=portfolio-metrics__item><p class=portfolio-metrics__value>3 Mio +</p><p class=portfolio-metrics__label>Of Dollars Saved From Successful Projects</p></div><div class=portfolio-metrics__item><p class=portfolio-metrics__value>50+</p><p class=portfolio-metrics__label>People Mentored</p></div></div></section><section class=portfolio-highlights><div class=portfolio-section__header><p class=portfolio-section__eyebrow>Impact highlights</p><h3 class=portfolio-section__title>Narrative snapshots across systems</h3><p class=portfolio-section__description>Each system tells a different outcome story. These are the quick reads before the deep dives.</p></div><div class=portfolio-highlights__grid><article class=portfolio-highlight><div class=portfolio-highlight__header><h4 class=portfolio-highlight__title>Data Streaming Platform</h4></div><div class="portfolio-highlight__summary prose"><p>In an organization that heavily adopts Apache Kafka and event-driven architecture, Kafka events become a critical asset — enabling the development of various applications that react to real-time data.</p></div><div class=portfolio-highlight__outcomes><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>Real-Time Fraud Detection Migration Support</p><p class=portfolio-highlight__outcome-description>Migrated fraud detection rules from batch to stream processing, enabling immediate fraud detection through Apache Flink. Improved system responsiveness and detection accuracy.</p></div><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>One-Click Deployment Solution</p><p class=portfolio-highlight__outcome-description>Developed a one-click deployment tool to simplify and streamline application release workflows, reducing manual steps and improving developer productivity.</p></div></div></article><article class=portfolio-highlight><div class=portfolio-highlight__header><h4 class=portfolio-highlight__title>Clickstream Ingestion</h4></div><div class="portfolio-highlight__summary prose"><p>Clickstream data is essential for marketing analytics and product development. However, collecting and managing this data presents several challenges. The ingestion system must be scalable to handle the high volume of user-generated events. It must also support flexible schemas to accommodate variations across event types. Additionally, the high frequency of incoming data requires careful selection of the communication protocol to ensure efficiency.</p></div><div class=portfolio-highlight__outcomes><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>Raccoon implementation</p><p class=portfolio-highlight__outcome-description>Developed a Go-based ingestion service to collect clickstream data via WebSocket and forward it to Kafka. Built according to a technical RFC and designed to scale for petabytes of daily traffic per data partition. Later extended to support additional protocols.</p></div><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>Open-Source Raccoon</p><p class=portfolio-highlight__outcome-description>Open-sourced the Mercury ingestion service as [Raccoon](https://github.com/goto/raccoon), enabling broader community use for scalable event ingestion. Contributed to documentation, production hardening, and feature generalization to support various protocols.</p></div></div></article><article class=portfolio-highlight><div class=portfolio-highlight__header><h4 class=portfolio-highlight__title>Customer Segmentation Engine</h4></div><div class="portfolio-highlight__summary prose"><p>Being able to define customer segments based on user behavior and attributes is essential for effective marketing. Traditionally, creating these segments requires marketers to identify data sources, write SQL queries, and manually execute them — a process that is tedious, error-prone, and time-consuming.</p></div><div class=portfolio-highlight__outcomes><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>Rule-Based User Segmentation Engine</p><p class=portfolio-highlight__outcome-description>Designed and developed a scalable user segmentation engine to power marketing use cases. Replaced a 3rd-party tool, resulting in millions of dollars in annual savings.</p></div></div></article><article class=portfolio-highlight><div class=portfolio-highlight__header><h4 class=portfolio-highlight__title>Clickstream Analytics Redesign</h4></div><div class="portfolio-highlight__summary prose"><p>An internal platform was developed to support analytics on top of clickstream data, primarily for product analytics. It allowed users to visualize trends, build dashboards, browse a catalog of clickstream events, and trace individual user activity.</p></div><div class=portfolio-highlight__outcomes><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>Analytics Platform Redesign</p><p class=portfolio-highlight__outcome-description>Redesigned key features of an internal analytics platform by identifying and resolving performance bottlenecks. Improved performance and significantly reduced operational costs.</p></div></div></article><article class=portfolio-highlight><div class=portfolio-highlight__header><h4 class=portfolio-highlight__title>A/B Testing Platform</h4></div><div class="portfolio-highlight__summary prose"><p>A/B testing allows product teams to optimize experiences based on data rather than assumptions. To enable this, an internal A/B testing platform was developed.</p></div><div class=portfolio-highlight__outcomes><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>UI Revamp Implementation</p><p class=portfolio-highlight__outcome-description>Revamped the UI of an internal A/B testing platform, significantly improving usability and user experience for experiment owners and analysts.</p></div><div class=portfolio-highlight__outcome><p class=portfolio-highlight__outcome-title>In-House Experimentat Analytics Platform</p><p class=portfolio-highlight__outcome-description>Collaborated with the experimentation team to reverse-engineer Eppo and design an in-house experimentation analytics platform. Led system design and oversaw implementation, replacing a third-party solution with a custom architecture tailored to internal needs.</p></div></div></article></div></section><div class=portfolio-orgs><div class=portfolio-orgs__row><img class=portfolio-orgs__logo src=/portfolio/raystack.webp alt=raystack>
 <img class=portfolio-orgs__logo src=/portfolio/goto.webp alt=goto>
 <img class=portfolio-orgs__logo src=/portfolio/yabb.webp alt=yabb>
