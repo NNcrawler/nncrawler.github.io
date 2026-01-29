@@ -43,10 +43,38 @@
 }
 
 .portfolio-hero {
-  padding: 1.75rem;
+  padding: 1.5rem;
   border: 1px solid var(--gray-2);
   border-radius: var(--radius-4);
   background: linear-gradient(180deg, var(--gray-0), var(--white));
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.portfolio-hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: max(1.75rem, env(safe-area-inset-bottom));
+  width: 2.4rem;
+  height: 2.1rem;
+  transform: translate(-50%, 0);
+  opacity: 0.95;
+  pointer-events: none;
+  animation: hero-scroll-nudge 1.8s ease-in-out infinite;
+  transition: opacity 220ms ease, transform 220ms ease;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 42' fill='none'><defs><linearGradient id='g' x1='24' y1='0' x2='24' y2='42' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='%23a5adba'/><stop offset='1' stop-color='%23505b6e'/></linearGradient></defs><polyline points='12 8 24 20 36 8' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><polyline points='12 18 24 30 36 18' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><polyline points='12 28 24 40 36 28' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.portfolio-hero--scrolled::after {
+  opacity: 0;
+  transform: translate(-50%, 0) scale(0.9);
+  animation: none;
 }
 
 .portfolio-hero__grid {
@@ -54,12 +82,13 @@
   grid-template-columns: minmax(0, 1fr);
   gap: 1.75rem;
   align-items: center;
+  width: 100%;
 }
 
 .portfolio-hero__content {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .portfolio-hero__eyebrow {
@@ -75,15 +104,15 @@
   margin: 0;
   font-family: var(--portfolio-font-display);
   font-weight: 700;
-  font-size: clamp(2.2rem, 4vw, 3.25rem);
-  line-height: 1.05;
+  font-size: clamp(1.9rem, 9vw, 2.8rem);
+  line-height: 1.08;
   color: var(--gray-8);
 }
 
 .portfolio-hero__lead {
   margin: 0;
   max-width: 40rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--gray-6);
 }
@@ -91,7 +120,7 @@
 .portfolio-hero__subhead {
   margin: 0;
   font-family: var(--portfolio-font-display);
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--gray-7);
 }
@@ -464,5 +493,54 @@
 
   .portfolio-metrics__row {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (--md-n-above) {
+  .portfolio-hero {
+    min-height: auto;
+    padding: 1.75rem;
+  }
+
+  .portfolio-hero::after {
+    content: none;
+  }
+
+  .portfolio-hero__content {
+    gap: 0.75rem;
+  }
+
+  .portfolio-hero__title {
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+    line-height: 1.05;
+  }
+
+  .portfolio-hero__lead {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-hero__subhead {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-hero::after {
+    content: none;
+  }
+}
+
+@keyframes hero-scroll-nudge {
+  0% {
+    transform: translate(-50%, -6px);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(-50%, 8px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -6px);
+    opacity: 0.55;
   }
 }
